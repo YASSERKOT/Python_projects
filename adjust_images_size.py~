@@ -16,11 +16,13 @@ def main():
     for k in range(ds1.RasterCount):
         band = ds1.GetRasterBand(k+1)
         ds = band.ReadAsArray()
+        ##Normalize dataset
         img1[:, :, k] = ds
     
     for k in range(ds2.RasterCount):
         band = ds2.GetRasterBand(k+1)
         ds = band.ReadAsArray()
+        ##Normalize dataset
         img2[:, :, k] = ds
     
     exported_img = np.zeros((2100, 2100, 6))
