@@ -1,9 +1,0 @@
-from skimage.io import imread
-
-image = imread('binded_and_labled_image.tiff',plugin="tifffile")
-print image.shape
-size = 0
-for i in range(image.shape[0]):
-    for j in range(image.shape[1]):
-        if image[i,j,4] > size:
-            size = image[i,j,5] 
